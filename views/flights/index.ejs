@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <nav>
+		<img src="/images/camera.svg">
+		  <a href="/flights">All FLights</a>
+		  <a href="/flights/new">New Flight</a>
+	  </nav>
+    <h1><%= Flight Documents %></h1>
+	<main>
+	<table id="list">
+		<thead>
+		  <tr>
+			<th>Title</th>
+			<th>Release<br>Year</th>
+			<th></th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <% flightDocs.forEach(function(f) { %>
+			<tr>
+			  <td><%= f.airline %></td>
+			  <td><%= f.airport %></td>
+              <td><%= f.flightNo %></td>
+              <td><%= f.departs %></td>
+			</tr>
+			<% }); %>
+		  </tbody>
+		
+		</table>
+		
+	</main>
+  </body>
+</html>
